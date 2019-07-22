@@ -34,6 +34,7 @@ const createStore = (initialState = {}) => {
   )
   store.asyncReducers = {}
 
+  store.subscribe(()=> localStorage.setItem('todo', JSON.stringify(store.getState().todos)))
   // To unsubscribe, invoke `store.unsubscribeHistory()` anytime
   store.unsubscribeHistory = browserHistory.listen(updateLocation(store))
 
