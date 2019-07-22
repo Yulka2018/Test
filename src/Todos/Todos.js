@@ -27,7 +27,7 @@ function Todos  ({ todos, remove, add, edit}){
       
       }
       </ul>
-  
+      
       <br />
       <div className='input-group'>
         <input type='text' className='form-control' placeholder='Write something' value={todo} onChange = {(e) => setTodo(e.target.value)} required/>
